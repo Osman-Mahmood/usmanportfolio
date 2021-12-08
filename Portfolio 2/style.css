@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+}
+header{
+    background-color: white;
+    overflow: hidden;
+    padding: 8px 40px;
+}
+.container_menu{
+    background-color: blue;
+}
+.logo{
+    font-size: 60px;
+    float: left;
+    display: flex;
+    margin-left: 50px;
+}
+.menu{
+    float: right;   
+}
+
+.menu .first_menu:before,
+.menu .first_menu:after,
+header:before,
+header:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+.menu ul li{
+    float: left;
+    list-style: none;
+}
+.menu ul li a{
+    
+    display: block;
+    margin-top: 40px;
+    padding: 3px 15px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+}
+.menu ul li a:hover{
+    background-color:palegreen;
+    color: gray;
+}
+.menu ul li a:focus{
+    background-color: black;
+}
+.menu .sub_menu{
+    background: #fff;
+    padding: 0;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    
+}
+.menu .sub_menu:after{
+    content: '';
+    position: absolute;
+    top: -16px;
+    border:8px solid transparent;
+    border-top:10px solid #000;
+  
+    right: 35%;
+}
+.menu .sub_menu li{
+    display: block;
+    float: none;
+    padding: 5px 15px;
+}
+.menu ul.first_menu li:hover .sub_menu{
+    display: block;
+}
+.banner{
+    position: relative;
+}
+img{
+    width: 100%;
+}
+.banner img{
+    height: 500px;
+}
+.banner p{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    transform: translate(-50px,-50px);
+    font-size: 30px;
+    color:black;
+    font-weight: 200;
+
+}
+.banner div{
+    position: absolute;
+    top: 50%;
+    left: 9%;
+    transform: translate(-50px,-50px);
+    font-size: 60px;
+    color:black;
+    font-weight: 700;
+
+}
+.about_us{
+    padding: 20px 60px;
+    overflow: hidden;
+}
+.section_title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 15px 0;
+}
+.section_title span{
+    
+    position: relative;
+   
+    display: inline-block;
+    padding: 0px 30px;
+    line-height: 1.5;
+}
+.section_title::before {
+    width: 100px;
+    height: 3px;
+    background:brown;
+    position: absolute;
+    bottom:-60px;
+    left: 50%;
+    margin-left: -50px;
+    content: '';
+    
+}
+
+.about_us_image{
+    float: left;
+width: 40%;
+position: relative;
+margin-top: 5%;
+}
+.about_us h2{
+    padding-left: 0px;
+   
+    
+    margin-left: 50px;
+
+}
+.about_us h2 span{
+    background-color:brown;
+    color: white;
+    display: inline-block;
+    padding: 15px 105px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 68px;
+    margin-top: 50px;
+    bottom: 50px;
+    
+}
+.about_us p{
+ 
+ position: relative;
+    float: right;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 25px 70px;
+}
+.gallery{
+    width: 100%;
+    padding: 70px 0px;
+    overflow: hidden;
+}
+
+
+.gallery .gallery_item{
+    width: 33%;
+    float: right;
+    margin-top: 0%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.contact_us{
+    padding: 20px 60px;
+    overflow: hidden;
+}
+
+.contact_us form{
+    max-width: 450px;
+    margin: 0 auto;
+}
+.contact_us form label{
+    display: block;
+    margin: 8px 0;
+    font-weight: 700;
+}
+.contact_us textarea, .contact_us input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+footer{
+    background-color:green;
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+a.move_to_top {
+    background: red;
+    color: #fff;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 2.5;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+a.move_to_top:focus:hover{
+    background-color:gray;
+    
+    
+}
+@media screen and  (max-width: 1024px ) {
+    .section_title span:after{right: -59px;}
+    .section_title span:before{left: -59px;}
+    section{
+       padding: 20px 30px;
+    }   
+   }
+   @media screen and  (max-width: 768px ) {
+    .logo, .menu, .about_us_image,
+    .information_area, .gallery .gallery_item {
+       float: none;
+       width: 100%;
+    }
+    .logo{text-align: center;}
+    .information_area{
+       padding: 10px 0;
+    }
+    .first_menu{
+       padding: 0;
+    }
+   
+   }
+   
+
+
+
+
+
+
